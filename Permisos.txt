@@ -1,0 +1,16 @@
+# Permisos
+add_ace group.admin command allow # allow all commands
+add_ace group.superadmin command allow # Acceso a todos los permisos
+add_ace group.admin command.quit deny # but don't allow quit
+add_principal identifier.fivem:1 group.admin # add the admin to the group
+
+# Permisos ESX
+add_principal group.admin group.user
+add_principal group.superadmin group.admin
+add_ace resource.es_extended command.add_ace allow
+add_ace resource.es_extended command.add_principal allow
+
+# Permisos Essentialmode
+add_ace resource.essentialmode command.sets allow
+add_ace resource.essentialmode command.add_principal allow
+add_ace resource.essentialmode command.add_ace allow
